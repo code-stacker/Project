@@ -6,20 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog4Star</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css_base.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href= "{% static "css_base.css" %}" >
 
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 </head>
 <body>
-  <div class="container">
+    <!-- < Image Logo> -->
+    <a href="/">
+        <img src="" alt="Blog4Star">
+    </a>
+    
+   
+
     </button>
     </div>
     <div id="BUTTON">
           <ul>
-            <!-- < Image Logo> --> 
-            <li><a href="/"><img src="" alt="Blog4Star"></a></li>
-            <!-- Navigation Bar -->
             <li><a href="/" id="home">HOME</a></li>
             <li><a href="/about" id="about">About</a></li>   
             <li class="dropbtn"><a href="#">Help</a>
@@ -37,7 +41,6 @@
               </div>    
           </ul>    
    </div>
- </div>
     {% block content %}
 
 
