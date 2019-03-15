@@ -1,12 +1,15 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <form method="POST"> {% csrf_token %}
-    <!-- email_attrs = {"placeholder":"abc@example.com","type":"text"} -->
-    <!-- pass_attrs  = {"placeholder":"********","type":"password"} -->
-        {{ form }}
-        <input type="submit" value="Login">
-        <a href="/signup"><button type="button">Register</button></a>
-        
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+   <form  id="Page" method="POST">
+     <h1>LOGIN</h1>
+     <input type="User" name="" placeholder="UserName">
+     <input type="Pass" name="" placeholder="Password">
+     <input class="Btn" type="Submit" name="" value="Login">
     </form>
-{% endblock content %}
+</body>
+</html>
