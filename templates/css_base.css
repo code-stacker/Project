@@ -1,0 +1,102 @@
+html{
+  margin-left:100px;
+  margin-right:100px;
+}
+body{
+	/*background-color:#303030;*/
+  background-image: url(image.jpg); 
+}
+.container{
+  width:100%;
+  margin:auto;
+}
+
+.SEARCH{
+    top: 100px;
+    float:right;
+    margin-left:10px;
+    margin-top: 12px;
+    margin-right: 12px;
+    position:relative;
+    top: 50%;
+    left: 50px;
+    text-align: center;
+    background:grey;
+    height: 20px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-txt{
+  border:none;
+  background:none;
+  outline:none;
+  color:black;
+  line-height: 20px;
+}
+
+#BUTTON{
+	width: 100%;
+	background:white;
+	height: 64px;
+  border-radius: 40px;
+}
+
+#BUTTON ul{
+	  color:black;
+    list-style-type: none;
+    position: relative;
+    padding:0;
+    margin: 0; 
+}
+
+#BUTTON li{
+	float: left;
+  margin-left:12px; 
+	margin-top: 11px;
+}
+
+#BUTTON li a{
+  width: 100px;
+  display:block;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 40px;
+}
+
+#BUTTON li a:hover {
+  background-color: #555;
+  color: white;
+}
+#BUTTON ul li ul{
+     text-align: center;
+     width: 140px;
+     padding-bottom: 10px;
+     color:red;
+     background-color:transparent;    
+}
+#BUTTON ul li ul li{
+	float:none;
+  padding-top: 10px;
+}
+
+#BUTTON ul li ul{
+  display:none;   
+}
+
+#BUTTON ul li:hover ul{
+	display: block;
+}
+
+#BUTTON ul li ul li a:hover{
+    background-color: #000;
+    color: white;
+}
+
+#footer{
+  	text-align: center;
+  	background-color:transparent;
+	  color:white;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="POST"> {% csrf_token %}
+        <!-- email_attrs = {"placeholder":"abc@example.com","type":"text"} -->
+        <!-- name_attrs  = {"placeholder":"Full Name","type":"text"} -->
+        <!-- pass_attrs  = {"placeholder":"********","type":"password"} -->
+        {{form}}
+        <input type="submit" value="Sign Up">
+        <span>Already a member?</span>
+        <a href="/login"><button type="button">Sign In</button></a>
+    </form>
+
+{% endblock %}
