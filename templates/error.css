@@ -1,7 +1,7 @@
-body{
+#Page{
 	margin:0;
     padding:0;
-    font-family:  segoe script;
+    font-family:segoe script;
     background-image: url(image.jpg);
 }
 
