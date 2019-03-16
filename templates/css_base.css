@@ -8,8 +8,6 @@ body{
 
 .SEARCH{
     float:right;
-    top: 100px;
-    float:right;
     margin-top: 12px;
     margin-right: 12px;
     top: 50%;
@@ -33,11 +31,12 @@ body{
 	width: 100%;
 	background:white;
 	height: 64px;
-    border-radius: 40px;
+  border-radius: 40px;
 }
 
 #BUTTON ul{
-	color:black;
+  
+	  color:black;
     list-style-type: none;
     position: relative;
     padding:0;
@@ -92,9 +91,9 @@ body{
 
 #footer{
 	text-align: center;
-	background-color: transparent;
-	color:white;
+	background-color:white;
+  color:black;
+  height: 20px;
 	border-style: blue dotted dashed;
-    border-radius: 10px;
-    position: absolute;  
+  border-radius: 10px; 
 }
