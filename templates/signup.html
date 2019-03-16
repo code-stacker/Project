@@ -1,14 +1,21 @@
 {% extends "base.html" %}
 
+    {% load static %}
+    {% block extrahead %}
+        <link rel="stylesheet" type="text/css" href="{% static "error.css" %}">
+    {% endblock %}
+
 {% block content %}
-    <form method="POST"> {% csrf_token %}
-        <!-- email_attrs = {"placeholder":"abc@example.com","type":"text"} -->
-        <!-- name_attrs  = {"placeholder":"Full Name","type":"text"} -->
-        <!-- pass_attrs  = {"placeholder":"********","type":"password"} -->
+    <form id="Page" method="POST"> {% csrf_token %}
+        <h1>SIGNUP</h1>
+
+        <!-- email_attrs = {"placeholder":"abc@example.com","type":"text","id":"id_email"} -->
+        <!-- name_attrs  = {"placeholder":"Full Name","type":"text","id":"id_name"} -->
+        <!-- pass_attrs  = {"placeholder":"********","type":"password","id":"id_password"} -->
         {{form}}
-        <input type="submit" value="Sign Up">
+        <input class="Btn" type="submit" value="Sign Up">
         <span>Already a member?</span>
-        <a href="/login"><button type="button">Sign In</button></a>
+        <a href="/login"><button type="button" class="Btn">Sign In</button></a>
     </form>
 
 {% endblock %}
