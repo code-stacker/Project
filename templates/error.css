@@ -24,14 +24,14 @@
 	text-shadow: 3px 3px 5px white;
 }
 
-#Page.Btn{
+#Page.Btn, #Page a button{
 	width: 10px;
 	border:none;
 	display: block;
 	border-radius: 20px;
 	background:black;
 }
-#Page input{
+#Page input, #Page a button{
 	border:0;
 	display: block;
 	background:none;
@@ -40,7 +40,7 @@
 	line-height: 20px;
 }
 
-#Page input{
+#Page input, #Page a button{
 	width: 100%;
 	background:white;
 	height: 30px;

@@ -8,6 +8,7 @@
     <title>Blog4Star</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href= "{% static "css_base.css" %}" >
+    
     {% block extrahead %}{% endblock %}
 
 
@@ -18,9 +19,8 @@
     <a href="/">
         <img src="" alt="Blog4Star">
     </a>
-    </div>
     <div id="BUTTON">
-          <ul>
+        <ul>
             <li><a href="/" id="home">HOME</a></li>
             <li><a href="/about" id="about">About</a></li>   
             <li class="dropbtn"><a href="#">Help</a>
@@ -28,22 +28,23 @@
                   <li><a href="/faq">FAQ</a></li>
                   <li><a href="/contact">Contact</a></li>
                 </ul>   
-             </li>    
-          </ul>    
-   </div>
-   <div class="SEARCH"> 
+            </li>    
+        </ul>    
+    </div>
+    <div class="SEARCH"> 
         <input class="search-txt"type="text" name="" placeholder="Search">
-             <a class="search-btn" href="#">
-               <i class="fas fa-search"></i> 
-             </a>
-  </div> 
-    {% block content %}
-<div style="margin-top: 800px"></div>    
-
-    {% endblock content %}
-     <footer id="footer">
-         <p>Copyright &copy; 2019 Blog4Star</p>
-     </footer>
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i> 
+            </a>
+    </div> 
+    <div style="margin-top: 800px;">
+        {% block content %}
+    
+        {% endblock content %}
+    </div>    
+    <footer id="footer">
+        <p>Copyright &copy; 2019 Blog4Star</p>
+    </footer>
 
 </body>
 </html>

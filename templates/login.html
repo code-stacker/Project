@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
     {% load static %}
     {% block extrahead %}   
-    <link rel="stylesheet" type="text/css" href="{% static "error.css" %}">
-{% endblock %}
+        <link rel="stylesheet" type="text/css" href="{% static "error.css" %}">
+    {% endblock %}
 
 {% block content %}
-<form id="Page" method="POST"> {% csrf_token %}
+    <form id="Page" method="POST"> {% csrf_token %}
         <h1>LOGIN</h1>
-    <!-- email_attrs = {"placeholder":"abc@example.com","type":"text"} -->
-    <!-- pass_attrs  = {"placeholder":"********","type":"password"} -->
+    <!-- email_attrs = {"placeholder":"abc@example.com","type":"text", "id":"id_email"} -->
+    <!-- pass_attrs  = {"placeholder":"********","type":"password", "id":"id_email"} -->
         {{ form }}
-     <input class="Btn" type="Submit" name="" value="Login">
+        
+        <input class="Btn" type="Submit" name="" value="Login">
+        <span>Not a member?</span>
+        <a href="/login"><button type="button" class="Btn">Sign Up</button></a>
         
     </form>
 {% endblock content %}
