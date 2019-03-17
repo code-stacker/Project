@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'quizSite',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -122,3 +123,8 @@ STATIC_URL = "/templates/"
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'templates'),
 )
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"quizSite/static_cdn")
+
+
+LOGIN_REDIRECT_URL = '/'
