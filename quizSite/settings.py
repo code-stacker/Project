@@ -128,3 +128,5 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"quizSite/static_cdn")
 
 
 LOGIN_REDIRECT_URL = '/'
+
+LOGIN_URL = '/login'

@@ -15,29 +15,59 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 </head>
 <body>
-    <!-- < Image Logo> -->
-    <a href="/">
-        <img src="" alt="Blog4Star">
-    </a>
-    <div id="BUTTON">
+    <header>
+        <!-- < Image Logo> -->
+        <a href="/">
+            <img id="logo" src={% static "logo.png" %} alt="Blog4Star">
+            <h1 style="float:left; color:aquamarine;"><u>BLOG4Star</u></h1>
+        </a>
+    </header>
+    <!-- Navigation Bar -->
+    <section id ="Navigation Bar">
+        <div id="BUTTON">
         <ul>
-            <li><a href="/" id="home">HOME</a></li>
-            <li><a href="/about" id="about">About</a></li>   
-            <li class="dropbtn"><a href="#">Help</a>
-                <ul class="drop-content">
-                  <li><a href="/faq">FAQ</a></li>
-                  <li><a href="/contact">Contact</a></li>
-                </ul>   
-            </li>    
+            <li><a href="/" id="home" style="position:relative;"><i class="fas fa-home">  HOME</i></a></li>
+            <li><a href="/about" id="about" style="position:relative;"><i class="fas fa-info"> About</i></a></li>    
+            <li class="login"><a href="/login" style="position:relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>   
+            <li class="dropbtn" style="float: right; position:relative;"><a href="#"><i class="fas fa-hands-helping">  Help</i></a>
+            <ul class="drop-content">
+                <li><a href="/faq"><i class="far fa-question-circle"> FAQ</i></a></li>
+                <hr>
+                <li><a href="/contact"><i class="fas fa-phone">  Contact</i></a></li>
+            </ul>   
+            </li>  
         </ul>    
-    </div>
-    <div class="SEARCH"> 
-        <input class="search-txt"type="text" name="" placeholder="Search">
-            <a class="search-btn" href="#">
-                <i class="fas fa-search"></i> 
-            </a>
-    </div> 
+        </div>
+    </section>
 
+    <!-- Search Bar and the Index -->
+<section>
+    <aside id="right-content">
+        <div id="SEARCH"> 
+            <h1>Search</h1>
+            </div> 
+            <hr>
+            <div id ="bar">  
+                <input class="search-txt"type="text" name="" placeholder="Search">
+                <a class="search-btn" href="#">
+                <i class="fas fa-search"></i> 
+                </a>
+            </div>
+            <hr>
+            <div class="content">
+            <h2>Index</h2>
+            <ul>
+                <li>something</li>
+                <li>something</li>
+                <li>something</li>
+                <li>something</li>
+                <li>something</li>
+            </ul>
+            </div> 
+    </aside>
+</section>
+
+<!-- The messege that is displayed after login or posting an article -->
     {% if messages %}
         {% for message in messages %}
              <div>
@@ -45,9 +75,11 @@
              </div>
         {% endfor %}
     {% endif %}
-        {% block content %}
+
     
-        {% endblock content %}   
+    {% block content %}
+
+    {% endblock content %}   
     <footer id="footer">
         <p>Copyright &copy; 2019 Blog4Star</p>
     </footer>

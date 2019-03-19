@@ -6,14 +6,15 @@
 
 {% block content %}
     <form id="Page" method="POST"> {% csrf_token %}
+        <img src={% static "login.jpg" %} alt="login image" class="avatar">
         <h1>LOGIN</h1>
     <!-- email_attrs = {"placeholder":"abc@example.com","type":"text", "id":"id_email"} -->
     <!-- pass_attrs  = {"placeholder":"********","type":"password", "id":"id_email"} -->
         {{ form }}
         
         <input class="Btn" type="Submit" name="" value="Login">
-        <span>Not a member?</span>
-        <a href="/signup"><button type="button" class="Btn">Sign Up</button></a>
-        
     </form>
+
+    <span>Not a member?</span>
+    <a href="/signup"><button type="button" class="Btn">Sign Up</button></a>
 {% endblock content %}
