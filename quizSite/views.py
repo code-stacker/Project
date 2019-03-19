@@ -1,5 +1,6 @@
 from __future__ import print_function
 from django.shortcuts import render,redirect
+from django.contrib.auth.decorators import login_required, permission_required
 from .forms import LoginForm,SignupForm,PostForm
 from .models import Article
 from django.contrib import messages
@@ -8,7 +9,7 @@ from django.contrib import messages
 def home_page(request):
 
     context = {
-        'articles': Article.objects.all(),
+        'articles': Article.objects.raw('SELECT * FROM quizSite_article ORDER BY date DESC'),
     }
 
     return render(request, "home.html", context)
@@ -37,11 +38,12 @@ def signup_page(request):
 
     return render(request, "signup.html", context)
 
-
+@login_required
 def new_page(request):
     form = PostForm(request.POST or None)
     context={"form":form}
     if form.is_valid():
+        form.instance.author = request.user
         form.save()
         messages.success(request, "New post added")
         return redirect('/')

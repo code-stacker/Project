@@ -10,10 +10,6 @@
 {% block content %}
     <!-- THIS IS BODY SECTION -->
     <!-- This is where the author will wite posts. -->
-
-    {% if user.is_authenticated %}
-    <!-- This form is displayed to logged in users only -->
-
     <form method="POST"> {% csrf_token %}
         <!-- title_attrs = {"placeholder":"Title", "autofocus":"autofocus", id='id_title'}
         content_attrs = {"placeholder":"Content", id='id_content'} -->
@@ -21,14 +17,4 @@
         <input type="submit" value="Post">
 
     </form>
-
-    {% else %}
-    <!-- This message is for non-logged in users -->
-        <p>
-            You don't have permission to create new posts. <br>
-            If you want to contribute, do register and apply for being a moderator. <br>
-            Thank You!
-        </p>
-    {% endif %}
-
 {% endblock %}

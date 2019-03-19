@@ -29,6 +29,7 @@ class SignupForm(MyUserForm):
     email       = forms.EmailField(widget=forms.TextInput(email_attrs),label='Email')
     password1   = forms.CharField(widget=forms.PasswordInput(pass_attrs),label='Password')
     password2   = forms.CharField(widget=forms.PasswordInput(pass_attrs),label='Confirm Password')
+    # contributer = forms.BooleanField(label='Do you want to become a cotributer?(Optional)', required=False)
 
     class Meta:
         model = User
