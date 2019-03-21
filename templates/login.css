@@ -1,0 +1,93 @@
+#Page{
+
+	margin:20px 34%;
+	height: 480px;
+	width: 300px;
+	padding: 80px 40px;
+	background-color:black; 
+	/*background: rgba(0,0,0,0.6);*/
+}
+
+#Page img{
+	margin-left:36%;
+	width:80px;
+	height:80px;
+	border-radius: 50%;
+	overflow: hidden;
+	
+}
+
+.errorlist nonfield{
+	font-size:10px;
+	list-style-type:none;
+}
+
+#id_username{
+  width:100%;
+  margin-bottom:10px;
+  color: white;
+}
+
+#id_password{
+	width:100%;
+	margin-bottom:10px;
+	color: white;
+}
+
+#Page input[type=text],
+#Page input[type=password]{
+  outline: none;
+  border:0;
+  border-bottom: 1px solid white;
+  background: transparent;
+  font-size: 15px;
+}
+
+/*.Btn{
+	margin-top:15%;;
+	border: none;
+	height: 40px;
+	width:30%;
+	outline: none;
+	background: transparent;
+	border-style:groove;
+	margin-left:32%;
+	border-radius: 20px;
+	color: wheat;
+}*/
+
+.Btn{
+	margin-top: 10%;
+	color:wheat;
+	height: 40px;
+	border: none;
+	width:100%;
+	background: transparent;
+	border-style:groove;
+	outline: none;
+	border-radius: 20px;
+}
+
+#Page p{
+  text-align: center;
+  margin-bottom: -2px;
+}
+
+.Btn1{
+  color:wheat;
+  height: 40px;
+  border: none;
+  width:100%;
+  background: transparent;
+  border-style:groove;
+  outline: none;
+  border-radius: 20px;
+}
+
+.btn input:hover{
+	background:wheat;
+	color:black;
+}
+ 
+
+

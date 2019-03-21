@@ -1,20 +1,23 @@
-{% extends 'base.html' %}
+{% extends 'home.html' %}
     {% load static %}
     {% block extrahead %}   
-        <link rel="stylesheet" type="text/css" href="{% static "error.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "login.css" %}">
     {% endblock %}
 
 {% block content %}
     <form id="Page" method="POST"> {% csrf_token %}
-        <img src={% static "login.jpg" %} alt="login image" class="avatar">
-        <h1>LOGIN</h1>
+        <img src={% static "login.png" %} alt="login image" class="avatar">
+        <h1 style="text-align:center">LOGIN</h1>
     <!-- email_attrs = {"placeholder":"abc@example.com","type":"text", "id":"id_email"} -->
-    <!-- pass_attrs  = {"placeholder":"********","type":"password", "id":"id_email"} -->
+    <!-- pass_attrs  = {"placeholder":"********","type":"password", "id":"id_pwd"} -->
         {{ form }}
-        
-        <input class="Btn" type="Submit" name="" value="Login">
+      <div class="btn"> 
+        <input type="Submit" class="Btn" value="Login">
+        <br>
+        <p>Not a member?</p>
+        <br>
+        <a href="/signup"><input type="button" class="Btn1" value="Sign Up"></input></a>
+      </div>
     </form>
 
-    <span>Not a member?</span>
-    <a href="/signup"><button type="button" class="Btn">Sign Up</button></a>
 {% endblock content %}

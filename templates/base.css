@@ -1,0 +1,127 @@
+html{
+  margin:20px 20px;
+  box-shadow: 1px 1px 15px #888888;
+  
+}
+body{
+  background:black;
+  color :white;
+  font-size: 20px;
+}
+
+header {
+  border-style: dotted white;
+  background: white;
+  background:transparent;
+  padding: 40px;
+  margin-left: 30px;
+}
+header img{
+  width:70px;
+  height: 70px;
+}
+
+.SEARCH{
+  float:right;
+  margin-top: 50px;
+  text-align: center;
+  background:grey;
+  height: 20px;
+  padding: 10px;
+}
+
+.search-txt{
+border:none;
+background:none;
+outline:none;
+font-size: 15px;
+color:white;
+line-height: 20px;
+}
+
+.SEARCH button{
+  margin-top:-11px;
+  float: right;
+  margin-left:7px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  padding: 11px 14px;
+}
+
+#BUTTON{
+    width: 100%;
+    background:white;
+    height: 64px;
+    box-shadow: 2px 2px 6px #888888;
+}
+
+#BUTTON ul{
+  
+	  color:black;
+    list-style-type: none;
+    position: relative;
+    padding:0;
+    margin: 0; 
+}
+
+#BUTTON li{
+	float: left;
+  margin-left:12px; 
+	margin-top: 11px;
+}
+
+#BUTTON li a{
+    width: 100px;
+    display:block;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+  
+}
+  
+#BUTTON li a:hover {
+  background-color: #555;
+  color: white;
+}
+#BUTTON ul li ul{
+     text-align: center;
+     width: 140px;
+     padding-bottom: 10px;
+     color:white;
+     background-color:white;
+     overflow: hidden; 
+}
+#BUTTON ul li ul li{
+	float:none;
+  padding-top: 4px;
+}
+
+#BUTTON ul li ul{
+  display:none;   
+}
+
+#BUTTON ul li:hover ul{
+	display: block;
+}
+
+#left-content{
+  float: left;
+  width:26%;
+  margin-top: 20px;
+}
+
+.content{
+   margin:20px;
+}
+
+#footer{
+    text-align: center;
+    background-color:white;
+    color:black;
+    height: 20px;
+    border-style: blue dotted dashed;
+    border-radius: 10px; 
+}

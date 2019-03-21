@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extrahead %}
+<link rel="stylesheet" type="text/css" href= "{% static "home.css" %}" >
 
 {% endblock %}
 {% block content %}
 
 {% if articles %}
     {% for article in articles %}
+      <div id="data">
         <h1>{{article.title}}</h1>
-        <span>{{article.author}}</span><span>{{article.date}}</span>
-        <div>{{article.content}}</div>
+        <div style="float: right; "><span>{{article.author}}</span><span>{{article.date}}</span></div>
+        <br>
+        <p>{{article.content}}</p>
+      </div>
     {% endfor %}
 {% endif %}
-
-
 
 {% endblock %}

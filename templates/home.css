@@ -1,0 +1,14 @@
+#data{
+    float: right;
+    width:68%;
+    margin-top:20px;
+    padding: 30px;
+  }
+#data h1{
+    text-align: center;
+    font-size: 30px;
+  }
+#data p{
+   margin:20px;
+  }
+  

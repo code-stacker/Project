@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog4Star</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href= "{% static "css_base.css" %}" >
+    <link rel="stylesheet" type="text/css" href= "{% static "base.css" %}" >
     
     {% block extrahead %}{% endblock %}
 
@@ -21,9 +21,14 @@
             <img id="logo" src={% static "logo.png" %} alt="Blog4Star">
             <h1 style="float:left; color:aquamarine;"><u>BLOG4Star</u></h1>
         </a>
+        <div class="SEARCH"> 
+            <input class="search-txt"type="text" name="" placeholder="Search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div> 
     </header>
+
     <!-- Navigation Bar -->
-    <section id ="Navigation Bar">
+    <section style="margin-bottom:20px;" id ="Navigation Bar" >
         <div id="BUTTON">
         <ul>
             <li><a href="/" id="home" style="position:relative;"><i class="fas fa-home">  HOME</i></a></li>
@@ -39,22 +44,10 @@
         </ul>    
         </div>
     </section>
-
+    {% block content %}
     <!-- Search Bar and the Index -->
-<section>
-    <aside id="right-content">
-        <div id="SEARCH"> 
-            <h1>Search</h1>
-            </div> 
-            <hr>
-            <div id ="bar">  
-                <input class="search-txt"type="text" name="" placeholder="Search">
-                <a class="search-btn" href="#">
-                <i class="fas fa-search"></i> 
-                </a>
-            </div>
-            <hr>
-            <div class="content">
+    <div id="left-content">
+          <div class="content">
             <h2>Index</h2>
             <ul>
                 <li>something</li>
@@ -64,8 +57,7 @@
                 <li>something</li>
             </ul>
             </div> 
-    </aside>
-</section>
+        </div>     
 
 <!-- The messege that is displayed after login or posting an article -->
     {% if messages %}
@@ -76,13 +68,7 @@
         {% endfor %}
     {% endif %}
 
+    {% endblock content %}  
     
-    {% block content %}
-
-    {% endblock content %}   
-    <footer id="footer">
-        <p>Copyright &copy; 2019 Blog4Star</p>
-    </footer>
-
 </body>
 </html>
