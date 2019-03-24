@@ -1,4 +1,4 @@
-{% extends 'home.html' %}
+{% extends 'base.html' %}
     {% load static %}
     {% block extrahead %}   
         <link rel="stylesheet" type="text/css" href="{% static "login.css" %}">
@@ -11,13 +11,13 @@
     <!-- email_attrs = {"placeholder":"abc@example.com","type":"text", "id":"id_email"} -->
     <!-- pass_attrs  = {"placeholder":"********","type":"password", "id":"id_pwd"} -->
         {{ form }}
-      <div class="btn"> 
-        <input type="Submit" class="Btn" value="Login">
-        <br>
-        <p>Not a member?</p>
-        <br>
-        <a href="/signup"><input type="button" class="Btn1" value="Sign Up"></input></a>
-      </div>
+        <div class="btn"> 
+            <input type="Submit" class="Btn" value="Login">
+            <br>
+            <p>Not a member?</p>
+            <br>
+            <a href="/signup"><input type="button" class="Btn1" value="Sign Up"></input></a>
+        </div>
     </form>
 
 {% endblock content %}

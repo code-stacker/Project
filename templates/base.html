@@ -7,6 +7,7 @@
     <title>Blog4Star</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href= "{% static "base.css" %}" >
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     
     {% block extrahead %}{% endblock %}
 
@@ -15,7 +16,7 @@
 </head>
 <body>
     <header>
-        <!-- < Image Logo> -->
+        <!-- Image Logo> -->
         <a href="/">
             <img id="logo" src={% static "logo.png" %} alt="Blog4Star">
             <h1 style="float:left; color:aquamarine;"><u>BLOG4Star</u></h1>
@@ -31,8 +32,18 @@
         <div id="BUTTON">
         <ul>
             <li><a href="/" id="home" style="position:relative;"><i class="fas fa-home">  HOME</i></a></li>
-            <li><a href="/about" id="about" style="position:relative;"><i class="fas fa-info"> About</i></a></li>    
-            <li class="login"><a href="/login" style="position:relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>   
+            <li><a href="/about" id="about" style="position:relative;"><i class="fas fa-info"> About</i></a></li>
+
+            {% if user.is_authenticated %}
+                <li class="login"><a href="/logout" style="position:relative;"><i class="fas fa-sign-out-alt">  Logout</i></a></li>
+
+                <!-- New Post button -->
+                <li><a href="/new" style="position:relative;"><i class="fas fa-file">  New Post</i></a></li>
+
+            {% else %}
+                <li class="login"><a href="/login" style="position:relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>
+            {% endif %}
+
             <li class="dropbtn" style="float: right; margin-right:10px;"><a href="#"><i class="fas fa-hands-helping">  Help</i></a>
                 <br>
                 <ul class="drop-content">
@@ -66,7 +77,6 @@
         <h1>flana damkana</h1>
     </section>
       
-    {% block content %}
 <!-- The messege that is displayed after login or posting an article -->
     {% if messages %}
         {% for message in messages %}
@@ -76,6 +86,7 @@
         {% endfor %}
     {% endif %}
 
+    {% block content %}
     {% endblock content %}  
   
 </body>
