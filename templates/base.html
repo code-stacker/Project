@@ -33,31 +33,40 @@
             <li><a href="/" id="home" style="position:relative;"><i class="fas fa-home">  HOME</i></a></li>
             <li><a href="/about" id="about" style="position:relative;"><i class="fas fa-info"> About</i></a></li>    
             <li class="login"><a href="/login" style="position:relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>   
-            <li class="dropbtn" style="float: right; position:relative;"><a href="#"><i class="fas fa-hands-helping">  Help</i></a>
-            <ul class="drop-content">
-                <li><a href="/faq"><i class="far fa-question-circle"> FAQ</i></a></li>
-                <hr>
-                <li><a href="/contact"><i class="fas fa-phone">  Contact</i></a></li>
-            </ul>   
+            <li class="dropbtn" style="float: right; margin-right:10px;"><a href="#"><i class="fas fa-hands-helping">  Help</i></a>
+                <br>
+                <ul class="drop-content">
+                    <li><a href="/faq"><i class="far fa-question-circle"> FAQ</i></a></li>
+                    <hr>
+                    <li><a href="/contact"><i class="fas fa-phone">  Contact</i></a></li>
+                </ul>   
             </li>  
         </ul>    
         </div>
     </section>
-    {% block content %}
-    <!-- Search Bar and the Index -->
+    <!-- INDEX -->
     <div id="left-content">
-          <div class="content">
-            <h2>Index</h2>
-            <ul>
-                <li>something</li>
-                <li>something</li>
-                <li>something</li>
-                <li>something</li>
-                <li>something</li>
-            </ul>
-            </div> 
-        </div>     
-
+        <h2>Index</h2>
+        <ol>
+            <li>something
+                <ul>
+                    <li>1 something</li>
+                    <li>2 something</li>
+                    <li>3 something</li>
+                    <li>4 something</li>
+                </ul>
+            </li>
+            <li>something</li>
+            <li>something</li>
+            <li>something</li>
+            <li>something</li>
+        </ol>
+    </div>  
+    <section id="ads">
+        <h1>flana damkana</h1>
+    </section>
+      
+    {% block content %}
 <!-- The messege that is displayed after login or posting an article -->
     {% if messages %}
         {% for message in messages %}
@@ -68,6 +77,6 @@
     {% endif %}
 
     {% endblock content %}  
-    
+  
 </body>
 </html>
