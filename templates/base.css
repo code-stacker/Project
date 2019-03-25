@@ -116,7 +116,7 @@ line-height: 20px;
   float: left;
   margin-left:20px;
   width:21%;
-  height: 1450px;
+  height: auto;
 }
 
 #left-content ol{
@@ -126,7 +126,7 @@ line-height: 20px;
 #ads{
   float: right;
   width: 18%;
-  height: 1450px;
+  height: auto;
 }
 
 #footer{

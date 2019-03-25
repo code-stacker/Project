@@ -9,9 +9,11 @@
     <form id="Page" method="POST"> {% csrf_token %}
         <h1>SIGNUP</h1>
 
-        <!-- email_attrs = {"placeholder":"abc@example.com","type":"text","id":"id_email"} -->
-        <!-- name_attrs  = {"placeholder":"Full Name","type":"text","id":"id_name"} -->
-        <!-- pass_attrs  = {"placeholder":"********","type":"password","id":"id_password"} -->
+        <!-- user_attrs  = {"placeholder":"username",'autofocus':'','class':'left'}
+            first_name = {'placeholder':'First Name','autofocus':'autofocus', 'class':'left'}
+            email_attrs = {"placeholder":"abc@example.com",'class':'left'}
+            pass_attrs  = {"placeholder":"********",'class':'right'}
+            last_name = {'placeholder':'Last Name', 'class':'right'} -->
         {{form}}
         {{profile}}
         <input class="Btn" type="submit" value="Sign Up">
