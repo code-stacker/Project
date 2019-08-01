@@ -1,0 +1,35 @@
+#Text{
+ color: white;
+ text-align: center;
+}
+
+#id_title{
+    width: 30%;
+    margin: 20px;
+    outline: none;
+    border:0;
+    border-bottom: 1px solid white;
+    color: aliceblue;
+    background: transparent;
+    font-size: 15px;
+}
+
+#submit{
+    color:wheat;
+    height: 40px;
+    border: none;
+    width:10%;
+    background: transparent;
+    border-style:groove;
+    outline: none;
+    border-radius: 20px;
+  }
+  
+#submit input:hover{
+     transition: 1.0s;
+     background:wheat;
+     color:black;
+  }
+   
+  
+  
