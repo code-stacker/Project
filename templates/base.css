@@ -1,5 +1,5 @@
   html{
-    margin:20px 20px;
+    margin:20px 20px ;
     box-shadow: 1px 1px 15px #888888; 
   }
   body{
@@ -106,37 +106,64 @@
     }
 
     .nav .icon {
-      visibility: hidden;
+     display: none;
     }
   }
 
   @media screen and (max-width: 800px) {
-    .nav li:not(:first-child) { display: none; }
+
+    .nav li:not(:first-child){
+      display: none;
+    }
     .nav li a.icon {
-      /*float: right;*/
+      float: right;
       background-color: #4CAF50;
-      visibility: visible;
       display: block;
     }
- 
     .SEARCH{
       visibility: hidden;
     }
-    
   }
   
   @media screen and (max-width: 800px) {
     .nav.responsive {position: relative;}
     .nav.responsive li.icon {
       position: absolute;
-      right: 0;
-      top: 0;
     }
     .nav.responsive li{
       float: none;
       display: block;
       text-align: left;
     }
+  }
+
+  @media screen and (max-width: 440px){
+    html{
+      margin:5px 5px;
+      box-shadow: 1px 1px 15px #888888; 
+    }
+    body{
+      background:black;
+      color: white;
+      font-size: 8px;
+    }
+
+    header {
+      border-style: dotted white;
+      background: white;
+      background:transparent;
+      padding: 20px;
+      margin-left: 5px;
+    }
+    header img{
+      width:30px;
+      height:30px;
+    }
+    .nav li{
+      float: left;
+      margin-left:0px; 
+      margin-top: 0px;
+    } 
   }
 
   #footer{

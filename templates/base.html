@@ -29,7 +29,7 @@
     </header>
 
     <!-- Navigation Bar -->
-    <section style="margin-bottom:20px;" id ="Navigation Bar" >
+    <section id ="Navigation Bar" >
         <div class="nav" id="mynav"> 
         <ul>
             <li><a href="/" id="home" style="position: relative;"><i class="fas fa-home">  HOME</i></a></li>
@@ -39,9 +39,8 @@
             <li class="login"><a href="/logout" style="position: relative;"><i class="fas fa-sign-out-alt">  Logout</i></a></li>
             <!-- New Post button -->
             <li><a href="/new" style="position: relative;"><i class="fas fa-file">  New Post</i></a></li>
-
             {% else %}
-                <li class="login"><a href="/login" style="position: relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>
+            <li class="login"><a href="/login" style="position: relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>
             {% endif %}
 
             <li class="dropbtn" style="float: right; margin-right:4px;"><a href="#"><i class="fas fa-hands-helping">  Help</i></a><br>
@@ -63,10 +62,8 @@
                 x.className = "nav";
               }
             }
-    </script>
+        </script>
     </section>
-    <img src={% static "image.png" %} alt="Temp" style="position: ; " width="100%">
-    
 <!-- The messege that is displayed after login or posting an article -->
     {% if messages %}
         {% for message in messages %}
