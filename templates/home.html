@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extrahead %}
-<link rel="stylesheet" type="text/css" href= "{% static "home.css" %}" >
 
 {% endblock %}
 
@@ -9,11 +8,9 @@
 
 {% if articles %}
     {% for article in articles %}
-      <div id="data">
-        <h1>{{article.title}}</h1>
-        <div style="float: right; "><span>{{article.author}}</span><span>{{article.date}}</span></div>
-        <br>
-        <p>{{article.content}}</p>
+      <div id="data" style=" margin: 2%; " >
+        <h1 style="text-align: center; margin-top: 5%; margin-bottom: 5%;">{{article.title}}</h1>
+        <div class="fr-view" style="">{{article.content | safe}}</div><div style="float: right;"><span>: by {{article.author}}</span> <span>{{article.date}}</span></div><br><hr>
       </div>
     {% endfor %}
 {% endif %}

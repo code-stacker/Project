@@ -1,20 +1,16 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
-
 {% block extrahead %}
-    <!-- THIS IS HEAD SECTION -->
-    <!-- Add styles here -->
-
+    
+    <link rel="stylesheet" type="text/css" href="{% static "post.css" %}">
 {% endblock %}
 
 {% block content %}
-    <!-- THIS IS BODY SECTION -->
-    <!-- This is where the author will wite posts. -->
-    <form method="POST"> {% csrf_token %}
+  
+    <form id="Text" method="POST"> {% csrf_token %}
         <!-- title_attrs = {"placeholder":"Title", "autofocus":"autofocus", id='id_title'}
         content_attrs = {"placeholder":"Content", id='id_content'} -->
         {{ form }}
-        <input type="submit" value="Post">
-
+    <input id="submit" type="submit" value="Post">
     </form>
 {% endblock %}

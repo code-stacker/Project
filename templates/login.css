@@ -22,16 +22,10 @@
 	list-style-type:none;
 }
 
-#id_username{
+#id_username , #id_password{
   width:100%;
   margin-bottom:10px;
   color: white;
-}
-
-#id_password{
-	width:100%;
-	margin-bottom:10px;
-	color: white;
 }
 
 #Page input[type=text],
@@ -42,19 +36,6 @@
   background: transparent;
   font-size: 15px;
 }
-
-/*.Btn{
-	margin-top:15%;;
-	border: none;
-	height: 40px;
-	width:30%;
-	outline: none;
-	background: transparent;
-	border-style:groove;
-	margin-left:32%;
-	border-radius: 20px;
-	color: wheat;
-}*/
 
 .Btn{
 	margin-top: 10%;
@@ -85,6 +66,7 @@
 }
 
 .btn input:hover{
+	transition: 1.0s;
 	background:wheat;
 	color:black;
 }

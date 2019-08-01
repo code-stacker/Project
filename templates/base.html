@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Blog4Star</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href= "{% static "base.css" %}" >
@@ -14,7 +15,7 @@
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 </head>
-<body>
+<body >
     <header>
         <!-- Image Logo> -->
         <a href="/">
@@ -29,54 +30,43 @@
 
     <!-- Navigation Bar -->
     <section style="margin-bottom:20px;" id ="Navigation Bar" >
-        <div id="BUTTON">
+        <div class="nav" id="mynav"> 
         <ul>
-            <li><a href="/" id="home" style="position:relative;"><i class="fas fa-home">  HOME</i></a></li>
-            <li><a href="/about" id="about" style="position:relative;"><i class="fas fa-info"> About</i></a></li>
+            <li><a href="/" id="home" style="position: relative;"><i class="fas fa-home">  HOME</i></a></li>
+            <li><a href="/about" id="about" style="position: relative;"><i class="fas fa-info"> About</i></a></li>
 
             {% if user.is_authenticated %}
-                <li class="login"><a href="/logout" style="position:relative;"><i class="fas fa-sign-out-alt">  Logout</i></a></li>
-
-                <!-- New Post button -->
-                <li><a href="/new" style="position:relative;"><i class="fas fa-file">  New Post</i></a></li>
+            <li class="login"><a href="/logout" style="position: relative;"><i class="fas fa-sign-out-alt">  Logout</i></a></li>
+            <!-- New Post button -->
+            <li><a href="/new" style="position: relative;"><i class="fas fa-file">  New Post</i></a></li>
 
             {% else %}
-                <li class="login"><a href="/login" style="position:relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>
+                <li class="login"><a href="/login" style="position: relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>
             {% endif %}
 
-            <li class="dropbtn" style="float: right; margin-right:10px;"><a href="#"><i class="fas fa-hands-helping">  Help</i></a>
-                <br>
-                <ul class="drop-content">
-                    <li><a href="/faq"><i class="far fa-question-circle"> FAQ</i></a></li>
-                    <hr>
-                    <li><a href="/contact"><i class="fas fa-phone">  Contact</i></a></li>
-                </ul>   
-            </li>  
-        </ul>    
+            <li class="dropbtn" style="float: right; margin-right:12px;"><a href="#"><i class="fas fa-hands-helping">  Help</i></a><br>
+            <ul class="drop-content">
+              <li><a href="/faq"><i class="far fa-question-circle"> FAQ</i></a></li><hr>
+              <li><a href="/contact"><i class="fas fa-phone">  Contact</i></a></li>
+            </ul></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a></li>  
+        </ul> 
         </div>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("mynav");
+              if (x.className === "nav") {
+                x.className += " responsive";
+              } else {
+                x.className = "nav";
+              }
+            }
+    </script>
     </section>
-    <!-- INDEX -->
-    <div id="left-content">
-        <h2>Index</h2>
-        <ol>
-            <li>something
-                <ul>
-                    <li>1 something</li>
-                    <li>2 something</li>
-                    <li>3 something</li>
-                    <li>4 something</li>
-                </ul>
-            </li>
-            <li>something</li>
-            <li>something</li>
-            <li>something</li>
-            <li>something</li>
-        </ol>
-    </div>  
-    <section id="ads">
-        <h1>flana damkana</h1>
-    </section>
-      
+    <img src={% static "image.png" %} alt="Temp" style="position: ; " width="100%">
+    
 <!-- The messege that is displayed after login or posting an article -->
     {% if messages %}
         {% for message in messages %}
@@ -87,7 +77,7 @@
     {% endif %}
 
     {% block content %}
-    {% endblock content %}  
+    {% endblock content %}
   
 </body>
 </html>

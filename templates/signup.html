@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "home.html" %}
 
     {% load static %}
     {% block extrahead %}
@@ -7,6 +7,7 @@
 
 {% block content %}
     <form id="Page" method="POST"> {% csrf_token %}
+        <img src={% static "login.png" %} alt="login image" class="avatar">
         <h1>SIGNUP</h1>
 
         <!-- user_attrs  = {"placeholder":"username",'autofocus':'','class':'left'}
@@ -15,10 +16,13 @@
             pass_attrs  = {"placeholder":"********",'class':'right'}
             last_name = {'placeholder':'Last Name', 'class':'right'} -->
         {{form}}
-        {{profile}}
-        <input class="Btn" type="submit" value="Sign Up">
-    </form>
-    <span>Already a member?</span>
-    <a href="/login"><button type="button" class="Btn">Sign In</button></a>
-
+        <div class="btn">
+            {{profile}}
+            <label for="id_contrib">Do you want to become a cotributer?(Optional)</label>
+            <input class="Btn" type="submit" value="Sign Up">
+            <p>Already a member?</p>
+            <a href="/login"><input type="button" class="Btn" value="Sign In"></input></a>
+        </div> 
+    </form><br>
 {% endblock %}
+{% block exclude %}{% endblock %}

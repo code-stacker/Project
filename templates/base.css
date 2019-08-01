@@ -1,138 +1,146 @@
-html{
-  margin:20px 20px;
-  box-shadow: 1px 1px 15px #888888;  
-}
-
-body{
-  background:black;
-  color :white;
-  font-size: 20px;
-}
-
-header {
-  border-style: dotted white;
-  background: white;
-  background:transparent;
-  padding: 40px;
-  margin-left: 30px;
-}
-header img{
-  width:70px;
-  height: 70px;
-}
-
-.SEARCH{
-  float:right;
-  margin-top: 50px;
-  text-align: center;
-  background:grey;
-  height: 20px;
-  padding: 10px;
-}
-
-.search-txt{
-border:none;
-background:none;
-outline:none;
-font-size: 15px;
-color:white;
-line-height: 20px;
-}
-
-.SEARCH button{
-  margin-top:-11px;
-  float: right;
-  margin-left:7px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  padding: 11px 14px;
-}
-
-#BUTTON{
-    width: 100%;
-    background:white;
-    height: 64px;
-    box-shadow: 2px 2px 6px #888888;
-}
-
-#BUTTON ul{
-  
-	  color:black;
-    list-style-type: none;
-    position: relative;
-    padding:0;
-    margin: 0; 
-}
-
-#BUTTON li{
-	float: left;
-  margin-left:12px; 
-	margin-top: 11px;
-}
-
-#BUTTON li a{
-    width: auto;
-    display:block;
-    color: black;
+  html{
+    margin:20px 20px;
+    box-shadow: 1px 1px 15px #888888; 
+  }
+  body{
+    background:black;
+    color: white;
     font-size: 20px;
-    padding: 10px;
-    text-decoration: none;
+  }
+  header {
+    border-style: dotted white;
+    background: white;
+    background:transparent;
+    padding: 40px;
+    margin-left: 30px;
+  }
+  header img{
+    width:70px;
+    height: 70px;
+  }
+  .SEARCH{
+    float:right;
+    margin-top: 48px;
     text-align: center;
-}
-
-#BUTTON li ul{
-  right: 0px;
-  position: absolute;
-  box-shadow: 1px 1px 15px #888888;
-}
-  
-#BUTTON li a:hover {
-  background-color: #555;
-  color: white;
-}
-#BUTTON ul li ul{
-     text-align: center;
-     width: 140px;
-     padding-bottom: 10px;
-     color:white;
-     background-color:white;
-     overflow: hidden; 
-}
-#BUTTON ul li ul li{
-	float:none;
-}
-
-#BUTTON ul li ul{
-  display:none;   
-}
-
-#BUTTON ul li:hover ul{
-	display: block;
-}
-
-#left-content{
+    background:grey;
+    height: 20px;
+    padding: 10px;
+  }
+  .search-txt{
+  border:none;
+  background:none;
+  outline:none;
+  font-size: 15px;
   color:white;
-  float: left;
-  margin-left:20px;
-  width:21%;
-  height: auto;
-}
+  line-height: 20px;
+  }
+  .SEARCH button{
+    margin-top:-11px;
+    float: right;
+    margin-left:7px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    padding: 11px 14px;
+  }
+  
+  .nav{
+      width: 100%;
+      background:white;
+      height: 64px;
+      box-shadow: 2px 2px 6px #888888;
+  }
+  .nav ul{
+    
+      color:black;
+      list-style-type: none;
+      padding:0;
+      margin: 0; 
+  }
+  .nav li{
+    float: left;
+    margin-left:12px; 
+    margin-top: 11px;
+  }
+  .nav li a{
+      width: auto;
+      display:block;
+      color: black;
+      font-size: 20px;
+      padding: 10px;
+      text-decoration: none;
+      text-align: center;
+  }
+  .nav li ul{
+    right: 0px;
+    position: absolute;
+    margin-right: 28px;
+    box-shadow: 1px 1px 15px #888888;
+  }
+    
+  .nav li a:hover {
+    background-color: #555;
+    color: white;
+    transition: 0.5s;
+  }
+  .nav ul li ul{
+      text-align: center;
+      width: auto;
+      padding-bottom: 10px;
+      color:white;
+      background-color:white;
+      overflow: hidden; 
+  }
+  .nav ul li ul li{
+    float:none;
+  }
 
-#left-content ol{
-  margin-left: 12px;
-}
+  @media screen and (min-width: 800px){
+    .nav ul li ul{
+      padding-right: 12px;
+      display:none;   
+    }
+    .nav ul li:hover ul{
+      display: block;
+    }
 
-#ads{
-  float: right;
-  width: 18%;
-  height: auto;
-}
+    .nav .icon {
+      visibility: hidden;
+    }
+  }
 
-#footer{
+  @media screen and (max-width: 800px) {
+    .nav li:not(:first-child) { display: none; }
+    .nav li.icon {
+      /*float: right;*/
+      background-color: #4CAF50;
+      visibility: visible;
+    }
+ 
+    .SEARCH{
+      visibility: hidden;
+    }
+    
+  }
+  
+  @media screen and (max-width: 800px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive li.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive li{
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  #footer{
     text-align: center;
     background-color:white;
-    color:black;
+    
     height: 20px;
     border-style: blue dotted dashed;
     border-radius: 10px; 

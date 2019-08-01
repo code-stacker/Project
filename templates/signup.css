@@ -1,3 +1,74 @@
-.textarea{
-    background: white;
+#Page{
+    margin-left:25%;
+    margin-right:25%;
+    margin-top: 10%;
 }
+#Page img{
+    width:100px;
+	height:100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+
+#Page img{
+	margin-left:45%;
+	width:80px;
+	height:80px;
+	border-radius: 50%;
+	overflow: hidden;
+	
+}
+
+#Page h1{
+    text-align: center;
+}
+
+.right{
+    width:100%;
+    margin-bottom:15px;
+    color: white;
+    margin-bottom:3%;
+}
+
+.left{
+    width:100%;
+    margin-bottom:15px;
+    color: white;
+    margin-bottom:3%;
+}
+
+
+.Btn{
+	margin-top: 4%;
+	color:wheat;
+	height: 40px;
+    border: none;
+    margin-left: 30%;
+    margin-bottom: 4%;
+	width:40%;
+	background: transparent;
+	border-style:groove;
+	outline: none;
+	border-radius: 20px;
+}
+
+#Page input[type=text],
+#Page input[type=password]{
+  outline: none;
+  border:0;
+  border-bottom: 1px solid white;
+  background: transparent;
+  font-size: 15px;
+}
+
+#Page p{
+    text-align: center;
+}
+
+.btn input:hover{
+    transition: 1s;
+	background:wheat;
+	color:black;
+}
+ 

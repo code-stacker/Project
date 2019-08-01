@@ -1,12 +1,12 @@
 #data{
-    margin-left: 24%;
-    width:52%;
-    margin-top:20px;
+    width:100%;
+    margin:30px;
     padding: 30px;
-
+    position: static;
+    
   }
 #data h1{
-    text-align: center;
+    text-align: left;
     font-size: 30px;
   }
 #data p{
