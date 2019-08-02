@@ -1,18 +1,17 @@
 #Page{
 	margin-left:35%;
-    margin-right:25%;
-	margin-top: 5%;
+    margin-right:35%;
+	margin-top: 10%;
 	margin-bottom: 5%;
-	height: 480px;
-	width: 300px;
-	padding: 80px 40px;
+	padding: 0px 20px 60px 20px;
 	box-shadow: 1px 1px 15px white; 
 }
 
 #Page img{
-	margin-left:34%;
-	width:100px;
-	height:100px;
+	margin-top: -15%;
+	margin-left:33%;
+	width:140px;
+	height:140px;
 	border-radius: 50%;
 	overflow: hidden;
 	
@@ -72,5 +71,6 @@
 	color:black;
 }
  
-
-
+@media screen and (max-width: ){
+	#Page{ width: 0px;	}
+}
