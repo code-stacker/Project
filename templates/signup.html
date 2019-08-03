@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+    {% load static %}
+    {% block extrahead %}
+        <link rel="stylesheet" type="text/css" href="{% static "signup.css" %}">
+    {% endblock %}
+
+{% block content %}
+    <form id="Page" method="POST"> {% csrf_token %}
+        <h1>SIGNUP</h1>
+
+        <!-- user_attrs  = {"placeholder":"username",'autofocus':'','class':'left'}
+            first_name = {'placeholder':'First Name','autofocus':'autofocus', 'class':'left'}
+            email_attrs = {"placeholder":"abc@example.com",'class':'left'}
+            pass_attrs  = {"placeholder":"********",'class':'right'}
+            last_name = {'placeholder':'Last Name', 'class':'right'} -->
+        {{form}}
+        {{profile}}
+        <input class="Btn" type="submit" value="Sign Up">
+    </form>
+    <span>Already a member?</span>
+    <a href="/login"><button type="button" class="Btn">Sign In</button></a>
+
+{% endblock %}

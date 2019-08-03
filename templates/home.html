@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extrahead %}
+<!-- Add CSS/JS Here -->
+<link rel='stylesheet' href="https://cdn.rawgit.com/froala/wysiwyg-editor/master/css/froala_style.min.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+{% if articles %}
+    {% for article in articles %}
+      <div>
+        <h1>{{article.title}}</h1>
+        <div><span>{{article.author}}</span><span>{{article.date}}</span></div>
+        <br>
+        <div class="fr-view">{{article.content | safe | truncatechars:200}}</div>
+      </div>
+    {% endfor %}
+{% endif %}
+
+{% endblock %}

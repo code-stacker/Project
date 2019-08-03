@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extrahead %}
+    <!-- THIS IS HEAD SECTION -->
+    <!-- Add styles here -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.3.1/classic/ckeditor.js"></script>
+
+
+{% endblock %}
+
+{% block content %}
+    <!-- THIS IS BODY SECTION -->
+    <!-- This is where the author will wite posts. -->
+    <div class="container">
+    <form method="POST" id="id_form"> {% csrf_token %}
+        <!-- title_attrs = {id='id_title'}
+        content_attrs = {id='id_content'} -->
+        <div class="form-group">
+            {{ form.title.label_tag }}
+            {{ form.title.errors }}
+            {{ form.title }}
+        </div>
+        <div class="from-group">
+            {{ form.content.label_tag }}
+            {{ form.content.errors }}
+            {{ form.content }}
+        </div>
+        <input type="submit" class="btn btn-success mt-sm-3 " onclick="Func()" value="Post">
+    </form>
+    </div>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#id_content' ) )
+            .then( newEditor => {
+                editor = newEditor;
+            } )
+            .catch( error => {
+                console.error( error );
+            } );
+        function Func() {
+            id_content.value = editor.getData();
+            document.getElementById("id_form").submit();
+        }
+    </script>
+
+{% endblock %}
