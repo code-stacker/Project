@@ -1,0 +1,7 @@
+Django==2.2.3
+httplib2==0.12.1
+mysqlclient==1.4.2.post1
+pytz==2019.1
+six==1.12.0
+sqlparse==0.3.0
+textmagic==2.0.3
