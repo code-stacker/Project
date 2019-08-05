@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'quizSite',
     'blog',
     'accounts',
-    'froala_editor'
 ]
 
 MIDDLEWARE = [
