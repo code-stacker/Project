@@ -6,9 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Blog4Star</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href= "{% static "base.css" %}" >
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
     {% block extrahead %}{% endblock %}
 
@@ -17,53 +27,42 @@
 </head>
 <body >
     <header>
-        <!-- Image Logo> -->
+        <!-- Image Logo -->
         <a href="/">
             <img id="logo" src={% static "logo.png" %} alt="Blog4Star">
             <h1 style="float:left; color:aquamarine;"><u>BLOG4Star</u></h1>
         </a>
-        <div class="SEARCH"> 
-            <input class="search-txt"type="text" name="" placeholder="Search">
+        <!--Search bar-->
+            <div class="Search">   
             <button type="submit"><i class="fas fa-search"></i></button>
-        </div> 
+            </div>
+            <input class="search-txt"type="text" name="" placeholder="Search">  
     </header>
 
     <!-- Navigation Bar -->
-    <section id ="Navigation Bar" >
-        <div class="nav" id="mynav"> 
-        <ul>
-            <li><a href="javascript:void(0);" class="icon" style="float: right;" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-            </a></li>
-            <li><a href="/" id="home" style="position: relative;"><i class="fas fa-home">  HOME</i></a></li>
-            <li><a href="/about" id="about" style="position: relative;"><i class="fas fa-info"> About</i></a></li>
-
+    <div class="navbar" id="mynavbar">
+            <a href="/" class="active"><i class="fas fa-home"> Home</i></a>
+            <a href="/about"><i class="fas fa-info"> About</i></a>
+        
             {% if user.is_authenticated %}
-            <li class="login"><a href="/logout" style="position: relative;"><i class="fas fa-sign-out-alt">  Logout</i></a></li>
+            <a href="/logout"><i class="fas fa-sign-out-alt">  Logout</i></a>
             <!-- New Post button -->
-            <li><a href="/new" style="position: relative;"><i class="fas fa-file">  New Post</i></a></li>
+            <a href="/new"><i class="fas fa-file">  New Post</i></a>
             {% else %}
-            <li class="login"><a href="/login" style="position: relative;"><i class="fas fa-sign-in-alt">  Login</i></a></li>
+            <a href="/login"><i class="fas fa-sign-out-alt"> Login</i></a>
             {% endif %}
-
-            <li class="dropbtn" style="float: right; margin-right:4px;"><a href="#"><i class="fas fa-hands-helping">  Help</i></a><br>
-            <ul class="drop-content">
-              <li><a href="/faq"><i class="far fa-question-circle"> FAQ</i></a></li><hr>
-              <li><a href="/contact"><i class="fas fa-phone">  Contact</i></a></li>
-            </ul></li>  
-        </ul> 
+        
+            <div class="dropdown">
+              <button class="dropbtn"><i class="fas fa-hands-helping">Help</i> 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="/FAQ"><i class="fas fa-question-circle"> FAQ</i></a>
+                <a href="/contact"><i class="fas fa-phone"> Contact</i></a>
+              </div>
+            </div> 
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
-        <script>
-            function myFunction() {
-              var x = document.getElementById("mynav");
-              if (x.className === "nav") {
-                x.className += " responsive";
-              } else {
-                x.className = "nav";
-              }
-            }
-        </script>
-    </section>
 <!-- The messege that is displayed after login or posting an article -->
     {% if messages %}
         {% for message in messages %}
@@ -75,6 +74,15 @@
 
     {% block content %}
     {% endblock content %}
-  
 </body>
+<script>
+        function myFunction() {
+          var x = document.getElementById("mynavbar");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+          }
+        }
+        </script>
 </html>

@@ -1,12 +1,14 @@
   html{
     margin:20px 20px ;
-    box-shadow: 1px 1px 15px #888888; 
+    box-shadow: 1px 1px 15px white;
   }
   body{
-    background:black;
+    background: black;
     color: white;
-    font-size: 20px;
+    margin: 0;
   }
+   
+  /*Logo */
   header {
     border-style: dotted white;
     background: white;
@@ -15,155 +17,167 @@
     margin-left: 30px;
   }
   header img{
-    width:70px;
+    width: 70px;
     height: 70px;
   }
-  .SEARCH{
+
+  /*Search Bar*/
+  .Search{
     float:right;
-    margin-top: 48px;
     text-align: center;
     background:grey;
-    height: 20px;
-    padding: 10px;
+    padding-right:1%;
+    margin-top: 30px;
   }
-  .search-txt{
-  border:none;
-  background:none;
-  outline:none;
-  font-size: 15px;
-  color:white;
-  line-height: 20px;
-  }
-  .SEARCH button{
-    margin-top:-11px;
+  button{
     float: right;
-    margin-left:7px;
     background: #ddd;
-    font-size: 17px;
+    font-size: 18px;
     border: none;
     padding: 11px 14px;
   }
+  .search-txt{
+    background: grey;
+    float: right;
+    color: white;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    padding: 13.5px;
+  }
+
+  /* Navigation Bar CSS*/
+  .navbar {
+    overflow: hidden;
+    background-color: whitesmoke;
+  }
   
-  .nav{
-      width: 100%;
-      background:white;
-      height: 50px;
-      box-shadow: 2px 2px 6px #888888;
-  }
-  .nav ul{
-    
-      color:black;
-      list-style-type: none;
-      padding:0;
-      margin: 0; 
-  }
-  .nav li{
+  .navbar a {
     float: left;
-    margin-left:4px; 
-    margin-top: 4px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
   }
-  .nav li a{
-      width: auto;
-      display:block;
-      color: black;
-      font-size: 20px;
-      padding: 10px;
-      text-decoration: none;
-      text-align: center;
+  
+  .navbar .icon {
+    display: none;
   }
-  .nav li ul{
-    right: 0px;
+  
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
     position: absolute;
-    margin-left: 10px;
-    margin-right: 28px;
-    box-shadow: 1px 1px 15px #888888;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    right: 0;
+    margin:48px 20px 0px 0px;
+    box-shadow: 0px 8px 16px 0px rgba(252, 252, 252, 0.2);
+    z-index: 1;
   }
-    
-  .nav li a:hover {
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #555;
     color: white;
-    transition: 0.5s;
   }
-  .nav ul li ul{
-      text-align: center;
-      width: auto;
-      padding: 5px 0px 9px 8px;
-      color:white;
-      background-color:white;
-      overflow: hidden; 
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
   }
-  .nav ul li ul li{
-    float:none;
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
-
-  @media screen and (min-width: 760px){
-    .nav ul li ul{
-      padding-right: 12px;
-      display:none;   
-    }
-    .nav ul li:hover ul{
-      display: block;
-    }
-
-    .nav .icon {
-     display: none;
-    }
-  }
-
-  @media screen and (max-width: 760px) {
-
-    .nav li:not(:first-child){
+  
+  @media screen and (max-width: 670px) {
+    .Search, .search-txt{
+      visibility: hidden;
       display: none;
     }
-
-    .nav li a.icon {
-      float: right;
-      background-color: #4CAF50;
+    .navbar a:not(:first-child), .dropdown .dropbtn {
+      display: none;
     }
-    .SEARCH{
-      visibility: hidden;
+    .navbar a.icon {
+      float: right;
+      display: block;
     }
   }
   
-  @media screen and (max-width: 760px) {
-    .nav.responsive {position: relative;}
-    .nav.responsive li.icon {
+  @media screen and (max-width: 670px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
       position: absolute;
+      right: 0;
+      top: 0;
     }
-    .nav.responsive li{
+    .navbar.responsive a {
       float: none;
       display: block;
       text-align: left;
     }
-  }
-
-  @media screen and (max-width: 440px){
-    html{
-      margin:5px 5px;
-      box-shadow: 1px 1px 15px #888888; 
-    }
-    body{
-      background:black;
-      color: white;
-      font-size: 12px;
-    }
-
-    header {
-      border-style: dotted white;
-      background: white;
-      background:transparent;
-      padding: 20px;
-      margin-left: 5px;
-    }
-
-    header a{
-      font-size: 8px;
-    }
-    header img{
-      width:30px;
-      height:30px;
+    .navbar.responsive .dropdown {float: none;}
+    .navbar.responsive .dropdown-content {position: relative;}
+    .navbar.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
     }
   }
+  
+  
+@media screen and (max-width: 450px){
+  html{
+    margin:5px 5px;
+    box-shadow: 1px 1px 15px #888888; 
+  }
+  body{
+    background:black;
+    color: white;
+    font-size: 15px;
+  }
+  header {
+    border-style: dotted white;
+    background: white;
+    background:transparent;
+    padding: 20px;
+    margin-left: 15%;
+  }
+  header a{
+    font-size: 10px;
+  }
+  header img{
+    width:35px;
+    height:35px;
+  }
+
+}
 
   #footer{
     text-align: center;
