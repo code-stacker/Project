@@ -6,7 +6,7 @@
     {% endblock %}
 
 {% block content %}
-    <form id="Page" method="POST"> {% csrf_token %}
+    <form class="signup_page" id="Page" method="POST"> {% csrf_token %}
         <img src={% static "login.png" %} alt="login image" class="avatar">
         <h1>SIGNUP</h1>
 
@@ -18,7 +18,7 @@
         {{form}}
         <div class="btn">
             {{profile}}
-            <label for="id_contrib">Do you want to become a contributer?(Optional)</label>
+            <label for="id_contrib">Do you want to become a contributer?(Optional)</label><br>
             <input class="Btn" type="submit" value="Sign Up">
             <p>Already a member?</p>
             <a href="/login"><input type="button" class="Btn" value="Sign In"></input></a>

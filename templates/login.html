@@ -5,7 +5,7 @@
     {% endblock %}
 
 {% block content %}
-    <form id="Page" method="POST"> {% csrf_token %}
+    <form  class="Login_page "id="Page" method="POST"> {% csrf_token %}
         <img src={% static "login.png" %} alt="login image" class="avatar">
         <h1 style="text-align:center">LOGIN</h1>
     <!-- email_attrs = {"placeholder":"abc@example.com","type":"text", "id":"id_email"} -->

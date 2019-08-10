@@ -65,6 +65,9 @@
   .navbar .icon {
     display: none;
   }
+  .navbar .engine{
+    display: none;
+  }
   
   .dropdown {
     float: right;
@@ -101,7 +104,9 @@
     display: block;
     text-align: left;
   }
-  
+  .active{
+    background: rgb(61, 192, 159);
+  }
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #555;
     color: white;
@@ -116,21 +121,36 @@
     display: block;
   }
   
-  @media screen and (max-width: 670px) {
-    .Search, .search-txt{
-      visibility: hidden;
-      display: none;
-    }
-    .navbar a:not(:first-child), .dropdown .dropbtn {
-      display: none;
-    }
-    .navbar a.icon {
-      float: right;
-      display: block;
-    }
+@media screen and (max-width: 670px) {
+  .Search, .search-txt{
+    visibility: hidden;
+    display: none;
   }
+  .navbar a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+  .engine{
+    float: left;
+    background-color: #555;
+  }
+  .engine input{
+    border: none;
+    width: 60%;
+    outline: none;
+    padding:12px;
+  }
+  .engine button{
+    width: auto;
+    font-size: 15px;
+    background-color: rgb(61, 192, 159);
+  }
+}
   
-  @media screen and (max-width: 670px) {
+ @media screen and (max-width: 670px) {
     .navbar.responsive {position: relative;}
     .navbar.responsive .icon {
       position: absolute;
@@ -149,12 +169,12 @@
       width: 100%;
       text-align: left;
     }
-  }
+}
   
   
 @media screen and (max-width: 450px){
   html{
-    margin:5px 5px;
+    margin:15px 15px;
     box-shadow: 1px 1px 15px #888888; 
   }
   body{

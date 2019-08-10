@@ -1,13 +1,14 @@
-#Page{
-	margin-left:35%;
-    margin-right:35%;
-	margin-top: 10%;
-	margin-bottom: 5%;
-	padding: 0px 20px 60px 20px;
-	box-shadow: 1px 1px 15px white; 
+@media screen and (min-width:1200px){
+	#Page{
+		margin-left:35%;
+		margin-right: 35%;
+		margin-top: 10%;
+		margin-bottom: 5%;
+		padding: 0px 20px 60px 20px;
+		box-shadow: 1px 1px 15px white; 
+	}
 }
-
-#Page img{
+.Login_page img{
 	margin-top: -15%;
 	margin-left:33%;
 	width:140px;
@@ -70,7 +71,44 @@
 	background:wheat;
 	color:black;
 }
- 
-@media screen and (max-width: ){
-	#Page{ width: 0px;	}
+@media screen and (min-width:800px) and (max-width:1202px){
+	#Page{
+		margin-top: 10%;
+		margin-left: 35%;
+		margin-bottom: 10%;
+		margin-right: 35%;
+	}
+	.Login_page img{
+		display: none;
+	}
+}
+
+
+@media screen and (min-width:600px) and (max-width:800px){
+	#Page{
+		margin: 40px 40px;
+		padding: 0px 100px 20px 100px;
+	}
+
+	.Login_page img{
+		display: none;
+	}
+	#id_username , #id_password{
+		width:100%;
+	}
+	.Btn, .Btn1{
+		width: 40%;
+		margin-left: 30%;
+	}
+}
+
+@media screen and (max-width:600px ){
+	#Page{
+		margin: 20px 20px;
+		padding: 0px 20px 20px 20px;
+	}
+
+	.Login_page img{
+		display: none;
+	}
 }
