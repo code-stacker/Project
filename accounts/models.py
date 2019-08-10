@@ -9,4 +9,4 @@ class Profile(models.Model):
     contrib     = models.BooleanField(default=False)
     
     def __str__(self):
-        return "{} {}".format(self.user.first_name, self.user.last_name)
+        return f"{self.user.first_name} {self.user.last_name}"

@@ -120,10 +120,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = "/templates/"
+STATIC_URL = "/static/"
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'templates'),
+    os.path.join(BASE_DIR,'static'),
 )
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"quizSite/static_cdn")
@@ -132,3 +132,15 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"quizSite/static_cdn")
 LOGIN_REDIRECT_URL = '/'
 
 LOGIN_URL = '/login'
+
+MEDIAL_URL = "/static/media"
+
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"quizSite/static_cdn/media")
+
+
+# Making messages tags compatible with bootstrap4 classes
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.ERROR : 'danger',
+}
