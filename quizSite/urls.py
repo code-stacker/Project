@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
 from blog.views import home_page,new_page
 from accounts.views import signup_page
+from accounts.forms import LoginForm
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_page),
-    url(r'^login/', LoginView.as_view(template_name='login.html')),
-    url(r'^logout/', LogoutView.as_view(template_name='logout.html')),
-    url(r'^signup/',signup_page),
-    url(r'^new/',new_page),
+    url(r'^login/$', LoginView.as_view(authentication_form=LoginForm, template_name='login.html')),
+    url(r'^logout/$', LogoutView.as_view(template_name='logout.html')),
+    url(r'^signup/$',signup_page),
+    url(r'^new/$',new_page),
 ]

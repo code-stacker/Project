@@ -1,23 +1,33 @@
 {% extends 'base.html' %}
     {% load static %}
     {% block extrahead %}   
-        <link rel="stylesheet" type="text/css" href="{% static "login.css" %}">
+        <!-- <link rel="stylesheet" type="text/css" href="{% static "login.css" %}"> -->
     {% endblock %}
 
 {% block content %}
-    <form id="Page" method="POST"> {% csrf_token %}
-        <img src={% static "login.png" %} alt="login image" class="avatar">
-        <h1 style="text-align:center">LOGIN</h1>
-    <!-- email_attrs = {"placeholder":"abc@example.com","type":"text", "id":"id_email"} -->
-    <!-- pass_attrs  = {"placeholder":"********","type":"password", "id":"id_pwd"} -->
-        {{ form }}
-        <div class="btn"> 
-            <input type="Submit" class="Btn" value="Login">
-            <br>
-            <p>Not a member?</p>
-            <br>
-            <a href="/signup/"><input type="button" class="Btn1" value="Sign Up"></input></a>
+    <form method="POST">
+    <fieldset>    
+        <legend>LOGIN</legend>
+        {% csrf_token %}
+        <div>
+            {{form.username.label_tag}}
+            {{form.username}}
         </div>
+        <div>
+            {{form.password.label_tag}}
+            {{form.password}}
+        </div>
+        {% if form.errors %}
+        <div>
+            <ul><li>Please enter a correct username and password. Note that both fields may be case-sensitive.</li></ul>
+        </div>
+        {% endif %}
+        <div>
+            <input type="Submit" value="Login">
+        </div>
+    </fieldset>
     </form>
+    <span>Not a member?</span>
+    <a href="/signup/"><small>Sign Up</small></a>
 
 {% endblock content %}

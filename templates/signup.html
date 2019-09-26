@@ -2,23 +2,53 @@
 
     {% load static %}
     {% block extrahead %}
-        <link rel="stylesheet" type="text/css" href="{% static "signup.css" %}">
+        <!-- <link rel="stylesheet" type="text/css" href="{% static "signup.css" %}"> -->
     {% endblock %}
 
 {% block content %}
-    <form id="Page" method="POST"> {% csrf_token %}
-        <h1>SIGNUP</h1>
+<h1>SIGNUP</h1>
+    <form method="POST"> {% csrf_token %}
 
-        <!-- user_attrs  = {"placeholder":"username",'autofocus':'','class':'left'}
-            first_name = {'placeholder':'First Name','autofocus':'autofocus', 'class':'left'}
-            email_attrs = {"placeholder":"abc@example.com",'class':'left'}
-            pass_attrs  = {"placeholder":"********",'class':'right'}
-            last_name = {'placeholder':'Last Name', 'class':'right'} -->
-        {{form}}
-        {{profile}}
-        <input class="Btn" type="submit" value="Sign Up">
+        <div>
+            {{form.username.label_tag}}
+            {{form.username.errors}}
+            {{form.username}}
+        </div>
+        <div>
+            {{form.first_name.label_tag}}
+            {{form.first_name.errors}}
+            {{form.first_name}}
+        </div>
+        <div>
+            {{form.password1.label_tag}}
+            {{form.password1.errors}}
+            {{form.password1}}
+        </div>
+        <div>
+            {{form.email.label_tag}}
+            {{form.email.errors}}
+            {{form.email}}
+        </div>
+        <div>
+            {{form.last_name.label_tag}}
+            {{form.last_name.errors}}
+            {{form.last_name}}
+        </div>
+        <div>
+            {{form.password2.label_tag}}
+            {{form.password2.errors}}
+            {{form.password2}}
+        </div>
+        <div>
+            {{profile.contrib.label_tag}}
+            {{profile.contrib.errors}}
+            {{profile.contrib}}
+        </div>
+        <div>
+            <input class="Btn" type="submit" value="Sign Up">
+        </div>
     </form>
     <span>Already a member?</span>
-    <a href="/login"><button type="button" class="Btn">Sign In</button></a>
+    <a href="/login/"><small>Sign In</small></a>
 
 {% endblock %}
