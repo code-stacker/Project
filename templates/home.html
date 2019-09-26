@@ -9,11 +9,9 @@
 
 {% if articles %}
     {% for article in articles %}
-      <div>
-        <h1>{{article.title}}</h1>
-        <div><span>{{article.author}}</span><span>{{article.date}}</span></div>
-        <br>
-        <div class="fr-view">{{article.content | safe | truncatechars:200}}</div>
+      <div id="data" style=" margin: 2%; " >
+        <h1 style="text-align: center; margin-top: 5%; margin-bottom: 5%;">{{article.title}}</h1>
+        <div class="fr-view">{{article.content | safe}}</div><div style="float: right;"><span>: by {{article.author}}</span> <span>{{article.date}}</span></div><br><hr>
       </div>
     {% endfor %}
 {% endif %}

@@ -1,0 +1,114 @@
+@media screen and (min-width:1200px){
+	#Page{
+		margin-left:35%;
+		margin-right: 35%;
+		margin-top: 10%;
+		margin-bottom: 5%;
+		padding: 0px 20px 60px 20px;
+		box-shadow: 1px 1px 15px white; 
+	}
+}
+.Login_page img{
+	margin-top: -15%;
+	margin-left:33%;
+	width:140px;
+	height:140px;
+	border-radius: 50%;
+	overflow: hidden;
+	
+}
+
+.errorlist nonfield{
+	font-size:10px;
+	list-style-type:none;
+}
+
+#id_username , #id_password{
+  width:100%;
+  margin-bottom: 15px;
+  color: wheat;
+}
+
+#Page input[type=text],
+#Page input[type=password]{
+  outline: none;
+  border:0;
+  border-bottom: 1px solid white;
+  background: transparent;
+  font-size: 15px;
+}
+
+.Btn{
+	margin-top: 10%;
+	color:wheat;
+	height: 40px;
+	border: none;
+	width:100%;
+	background: transparent;
+	border-style:groove;
+	outline: none;
+	border-radius: 20px;
+}
+
+#Page p{
+  text-align: center;
+  margin-bottom: -2px;
+}
+
+.Btn1{
+  color:wheat;
+  height: 40px;
+  border: none;
+  width:100%;
+  background: transparent;
+  border-style:groove;
+  outline: none;
+  border-radius: 20px;
+}
+
+.btn input:hover{
+	transition: 1.0s;
+	background:wheat;
+	color:black;
+}
+@media screen and (min-width:800px) and (max-width:1202px){
+	#Page{
+		margin-top: 10%;
+		margin-left: 35%;
+		margin-bottom: 10%;
+		margin-right: 35%;
+	}
+	.Login_page img{
+		display: none;
+	}
+}
+
+
+@media screen and (min-width:600px) and (max-width:800px){
+	#Page{
+		margin: 40px 40px;
+		padding: 0px 100px 20px 100px;
+	}
+
+	.Login_page img{
+		display: none;
+	}
+	#id_username , #id_password{
+		width:100%;
+	}
+	.Btn, .Btn1{
+		width: 40%;
+		margin-left: 30%;
+	}
+}
+
+@media screen and (max-width:600px ){
+	#Page{
+		margin: 20px 20px;
+		padding: 0px 20px 20px 20px;
+	}
+
+	.Login_page img{
+		display: none;
+	}
+}

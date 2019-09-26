@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
-
+     
 {% block extrahead %}
     <!-- THIS IS HEAD SECTION -->
     <!-- Add styles here -->
+    <link rel="stylesheet" type="text/css" href="{% static "new_post.css" %}">
     <script src="https://cdn.ckeditor.com/ckeditor5/12.3.1/classic/ckeditor.js"></script>
-
+    <style>
+        .ck-content{
+            color: black;
+        }
+    </style>
 
 {% endblock %}
 
@@ -43,5 +48,4 @@
             document.getElementById("id_form").submit();
         }
     </script>
-
 {% endblock %}

@@ -1,0 +1,13 @@
+#data{
+    width:100%;
+    margin:20px;
+    padding: 20px;
+    
+  }
+#data h1{
+    text-align: left;
+    font-size: 30px;
+  }
+#data p{
+   margin:20px;
+  }

@@ -1,0 +1,90 @@
+@media screen and (min-width:700px){
+    #Page{
+        margin-left:25%;
+        margin-right:25%;
+        margin-top: 10%;
+        box-shadow: 1px 1px 15px white; 
+        padding: 0px 20px 0px 20px;
+    }
+}
+#Page img{
+    margin-top: -65px;
+    margin-left:40%;
+	width:140px;
+	height:140px;
+	border-radius: 60%;
+    overflow: hidden;
+}
+
+#Page h1{
+    text-align: center;
+}
+
+.right{
+    width:100%;
+    margin-bottom:15px;
+    color: wheat;
+}
+
+.left{
+    width:100%;
+    margin-top: 10px;
+    margin-bottom:15px;
+    color: wheat;
+}
+
+.Btn{
+	margin-top: 4%;
+	color:wheat;
+	height: 40px;
+    border: none;
+    margin-left: 30%;
+    margin-bottom: 4%;
+	width:40%;
+	background: transparent;
+	border-style:groove;
+	outline: none;
+	border-radius: 20px;
+}
+
+#Page input[type=text],
+#Page input[type=password]{
+  outline: none;
+  border:0;
+  border-bottom: 1px solid white;
+  background: transparent;
+  font-size: 15px;
+}
+
+#Page p{
+    text-align: center;
+}
+
+.btn input:hover{
+    transition: 1s;
+	background:wheat;
+	color:black;
+}
+
+@media screen and (max-width: 1200px){
+    #Page{
+        padding: 20px 20px;
+    }
+    .signup_page img{
+		display: none;
+    }
+}
+@media screen and (max-width:700px ){
+    #Page{
+        margin: 30px 20px;
+    }
+	.signup_page img{
+        display: none;
+    }
+    @media (max-width:500px) {
+        .Btn{
+            width: 100%;
+            margin-left: 0;
+        }   
+    }
+}
